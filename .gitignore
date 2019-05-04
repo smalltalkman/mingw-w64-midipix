@@ -1,0 +1,12 @@
+src/
+pkg/
+*.pkg.tar.xz
+*.src.tar.gz
+
+*.log
+*.log.[0-9]*
+
+*.msi
+*.zip
+*.tar.gz
+*.tar.xz
