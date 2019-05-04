@@ -1,0 +1,27 @@
+# Maintainer: gym603 <gui_yuan_miao@163.com>
+
+_realname=midipix-psxtypes
+pkgbase=mingw-w64-${_realname}-git
+pkgname="${MINGW_PACKAGE_PREFIX}-${_realname}-git"
+_base_ver=0.0.0
+pkgver=0.0.0.19.d438213
+pkgrel=1
+pkgdesc="Portable type definitions for a free-standing environment (mingw-w64)"
+arch=('any')
+url="https://github.com/midipix-project/psxtypes"
+license=('custom')
+source=(${_realname}::git+https://github.com/midipix-project/psxtypes.git)
+sha256sums=('SKIP')
+
+pkgver() {
+  cd "$srcdir/$_realname"
+  printf "%s.%s.%s" "${_base_ver}" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+  cd "${srcdir}/${_realname}"
+  make DESTDIR="${pkgdir}${MINGW_PREFIX}/" install
+
+  cd "${srcdir}/${_realname}"
+  install -Dm644 COPYING.PSXTYPES "${pkgdir}${MINGW_PREFIX}/share/licenses/${_realname}/COPYING.PSXTYPES"
+}

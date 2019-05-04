@@ -1,0 +1,12 @@
+diff -urN -x '*.orig' midipix-ntapi.orig/project/extras.mk midipix-ntapi/project/extras.mk
+--- midipix-ntapi.orig/project/extras.mk	2019-05-03 22:08:53.487959800 +0800
++++ midipix-ntapi/project/extras.mk	2019-05-04 10:30:11.412275500 +0800
+@@ -6,7 +6,7 @@
+ CFLAGS_CONFIG 		+= -UWIN64 -U_WIN64 -U__WIN64 -U__WIN64__
+ 
+ LDFLAGS_SHARED 		+= -Wl,--exclude-all-symbols
+-LDFLAGS_SHARED 		+= -nostdlib -lpemagine -ldalist
++LDFLAGS_SHARED 		+= -lpemagine -ldalist
+ 
+ ifeq ($(HOST_BITS),32)
+ 	LDFLAGS_SHARED 	+= -Wl,--entry -Wl,$(HOST_UNDERSCORE)__ntapi_entry_point@12

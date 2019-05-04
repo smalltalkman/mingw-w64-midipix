@@ -1,0 +1,12 @@
+diff -urN '-x*.orig' midipix-pemagine.orig/sofort/ccenv/ccenv.sh midipix-pemagine/sofort/ccenv/ccenv.sh
+--- midipix-pemagine.orig/sofort/ccenv/ccenv.sh	2019-05-03 09:03:38.674820100 +0800
++++ midipix-pemagine/sofort/ccenv/ccenv.sh	2019-05-03 09:10:39.700901400 +0800
+@@ -1043,7 +1043,7 @@
+ 
+ 	ccenv_cfgtype=$1
+ 	ccenv_cfgfile="$mb_pwd/ccenv/$ccenv_cfgtype.mk"
+-	ccenv_freestd=
++	ccenv_freestd=yes
+ 	ccenv_cchost=
+ 
+ 	if [ $ccenv_cfgtype = 'native' ]; then

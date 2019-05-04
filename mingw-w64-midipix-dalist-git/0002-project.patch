@@ -1,0 +1,11 @@
+diff -urN -x '*.orig' midipix-dalist.orig/project/extras.mk midipix-dalist/project/extras.mk
+--- midipix-dalist.orig/project/extras.mk	2019-05-04 10:09:33.641479100 +0800
++++ midipix-dalist/project/extras.mk	2019-05-04 10:11:31.144199800 +0800
+@@ -7,7 +7,6 @@
+ 	CFLAGS_CONFIG 	+= -UWIN64 -U_WIN64 -U__WIN64 -U__WIN64__
+ 
+ 	LDFLAGS_SHARED 	+= -Wl,--exclude-all-symbols
+-	LDFLAGS_SHARED 	+= -nostdlib
+ 
+ 	ifeq ($(HOST_BITS),32)
+ 		LDFLAGS_SHARED 	+= -Wl,--entry -Wl,$(HOST_UNDERSCORE)dalist_entry_point@12

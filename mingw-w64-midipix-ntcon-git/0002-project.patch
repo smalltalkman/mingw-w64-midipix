@@ -1,0 +1,18 @@
+diff -urN -x '*.orig' midipix-ntcon.orig/project/extras.mk midipix-ntcon/project/extras.mk
+--- midipix-ntcon.orig/project/extras.mk	2019-05-03 22:12:36.558353200 +0800
++++ midipix-ntcon/project/extras.mk	2019-05-04 10:21:45.274326100 +0800
+@@ -1,12 +1,12 @@
+ CFLAGS_SHARED_ATTR 	+= -DNTCON_EXPORT
+-CFLAGS_STATIC_ATTR 	+= -DNTCON_STATIC -DPE_STATIC -mstatic
++CFLAGS_STATIC_ATTR 	+= -DNTCON_STATIC -DPE_STATIC --static
+ 
+ CFLAGS_CONFIG 		+= -D_MIDIPIX_FREESTANDING -D__NT$(HOST_BITS)
+ CFLAGS_CONFIG 		+= -UWIN32 -U_WIN32 -U__WIN32 -U__WIN32__
+ CFLAGS_CONFIG 		+= -UWIN64 -U_WIN64 -U__WIN64 -U__WIN64__
+ 
+ LDFLAGS_SHARED 		+= -Wl,--exclude-all-symbols
+-LDFLAGS_SHARED 		+= -nostdlib -lpemagine
++LDFLAGS_SHARED 		+= -lpemagine
+ 
+ ifeq ($(HOST_BITS),32)
+ 	LDFLAGS_SHARED 	+= -Wl,--entry -Wl,$(HOST_UNDERSCORE)ntcon_entry_point@12

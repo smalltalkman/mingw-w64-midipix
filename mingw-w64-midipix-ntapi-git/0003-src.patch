@@ -1,0 +1,60 @@
+diff -urN '-x*.orig' midipix-ntapi.orig/src/afl/ntapi_afl_connect.c midipix-ntapi/src/afl/ntapi_afl_connect.c
+--- midipix-ntapi.orig/src/afl/ntapi_afl_connect.c	2019-05-03 10:07:58.960615800 +0800
++++ midipix-ntapi/src/afl/ntapi_afl_connect.c	2019-05-03 15:14:32.048793000 +0800
+@@ -211,7 +211,7 @@
+ }
+ 
+ 
+-int32_t	__ntapi_afl_create(
++int32_t	__stdcall __ntapi_afl_create(
+ 	__in	void *			hport,
+ 	__out	nt_afl_info *		afl,
+ 	__in	nt_oa *			oa,
+diff -urN '-x*.orig' midipix-ntapi.orig/src/daemon/ntapi_dsr_init.c midipix-ntapi/src/daemon/ntapi_dsr_init.c
+--- midipix-ntapi.orig/src/daemon/ntapi_dsr_init.c	2019-05-03 10:07:59.020619300 +0800
++++ midipix-ntapi/src/daemon/ntapi_dsr_init.c	2019-05-03 15:16:57.380269700 +0800
+@@ -217,7 +217,7 @@
+ 		__ntapi_dsr_start_impl(params));
+ }
+ 
+-int32_t __stdcall __ntapi_dsr_start(nt_daemon_params * params)
++int32_t __ntapi_dsr_start(nt_daemon_params * params)
+ {
+ 	return __ntapi_tt_seh_frame(
+ 		params,0,0,
+diff -urN '-x*.orig' midipix-ntapi.orig/src/msq/ntapi_msq_connect.c midipix-ntapi/src/msq/ntapi_msq_connect.c
+--- midipix-ntapi.orig/src/msq/ntapi_msq_connect.c	2019-05-03 10:07:59.250632400 +0800
++++ midipix-ntapi/src/msq/ntapi_msq_connect.c	2019-05-03 15:18:36.285276100 +0800
+@@ -217,7 +217,7 @@
+ }
+ 
+ 
+-int32_t	__ntapi_msq_create(
++int32_t	__stdcall __ntapi_msq_create(
+ 	__in	void *			hport,
+ 	__out	nt_msq_info *		msq,
+ 	__in	uint32_t		access,
+diff -urN '-x*.orig' midipix-ntapi.orig/src/sem/ntapi_sem_connect.c midipix-ntapi/src/sem/ntapi_sem_connect.c
+--- midipix-ntapi.orig/src/sem/ntapi_sem_connect.c	2019-05-03 10:07:59.465644700 +0800
++++ midipix-ntapi/src/sem/ntapi_sem_connect.c	2019-05-03 15:19:51.502711700 +0800
+@@ -217,7 +217,7 @@
+ }
+ 
+ 
+-int32_t	__ntapi_sem_create(
++int32_t	__stdcall __ntapi_sem_create(
+ 	__in	void *			hport,
+ 	__out	nt_sem_info *		sem,
+ 	__in	uint32_t		access,
+diff -urN '-x*.orig' midipix-ntapi.orig/src/string/ntapi_tt_dec_utf16_to_uintptr.c midipix-ntapi/src/string/ntapi_tt_dec_utf16_to_uintptr.c
+--- midipix-ntapi.orig/src/string/ntapi_tt_dec_utf16_to_uintptr.c	2019-05-03 10:07:59.616653400 +0800
++++ midipix-ntapi/src/string/ntapi_tt_dec_utf16_to_uintptr.c	2019-05-03 15:34:40.651967000 +0800
+@@ -110,7 +110,7 @@
+ 	__in	const wchar16_t *	wch_cap,
+ 	__out	uintptr_t *		key)
+ {
+-	return __tt_dec_utf16_to_uint32(
++	return __tt_dec_utf16_to_uint64(
+ 		wch_arg,wch_cap,key);
+ }
+ #endif
