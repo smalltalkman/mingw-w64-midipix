@@ -13,7 +13,9 @@ license=('custom')
 depends=("${MINGW_PACKAGE_PREFIX}-midipix-psxtypes-git"
          "${MINGW_PACKAGE_PREFIX}-midipix-pemagine-git"
          "${MINGW_PACKAGE_PREFIX}-midipix-dalist-git")
-makedepends=("make"
+makedepends=("git"
+             "patch"
+             "make"
              "${MINGW_PACKAGE_PREFIX}-gcc")
 source=(${_realname}::git://midipix.org/ntapi
         0001-sofort.patch

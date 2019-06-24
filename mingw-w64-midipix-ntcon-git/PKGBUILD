@@ -12,7 +12,9 @@ url="https://git.midipix.org/ntcon/"
 license=('custom')
 depends=("${MINGW_PACKAGE_PREFIX}-midipix-psxtypes-git"
          "${MINGW_PACKAGE_PREFIX}-midipix-pemagine-git")
-makedepends=("make"
+makedepends=("git"
+             "patch"
+             "make"
              "${MINGW_PACKAGE_PREFIX}-gcc")
 source=(${_realname}::git://midipix.org/ntcon
         0001-sofort.patch

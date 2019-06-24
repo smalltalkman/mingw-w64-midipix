@@ -10,6 +10,7 @@ pkgdesc="Portable type definitions for a free-standing environment (mingw-w64)"
 arch=('any')
 url="https://github.com/midipix-project/psxtypes"
 license=('custom')
+makedepends=("git" "make")
 source=(${_realname}::git+https://github.com/midipix-project/psxtypes.git)
 sha256sums=('SKIP')
 

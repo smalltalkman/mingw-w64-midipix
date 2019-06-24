@@ -11,7 +11,9 @@ arch=('any')
 url="https://git.midipix.org/dalist/"
 license=('custom')
 depends=("${MINGW_PACKAGE_PREFIX}-midipix-psxtypes-git")
-makedepends=("make"
+makedepends=("git"
+             "patch"
+             "make"
              "${MINGW_PACKAGE_PREFIX}-gcc")
 source=(${_realname}::git://midipix.org/dalist
         0001-sofort.patch
