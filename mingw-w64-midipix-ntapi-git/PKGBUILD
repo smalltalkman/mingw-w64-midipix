@@ -44,7 +44,14 @@ prepare() {
     0002-project.patch \
     0003-src.patch
 
-  export HOST_BITS=32
+  case "${CARCH}" in
+    i686)
+      export HOST_BITS=32
+    ;;
+    x86_64)
+      export HOST_BITS=64
+    ;;
+  esac
   export HOST_UNDERSCORE=_
 }
 
