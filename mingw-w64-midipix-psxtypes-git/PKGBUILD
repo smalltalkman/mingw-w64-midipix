@@ -8,10 +8,10 @@ pkgver=0.0.0.19.d438213
 pkgrel=1
 pkgdesc="Portable type definitions for a free-standing environment (mingw-w64)"
 arch=('any')
-url="https://github.com/midipix-project/psxtypes"
+url="https://git.midipix.org/psxtypes/"
 license=('custom')
 makedepends=("git" "make")
-source=(${_realname}::git+https://github.com/midipix-project/psxtypes.git)
+source=(${_realname}::git://midipix.org/psxtypes)
 sha256sums=('SKIP')
 
 pkgver() {
