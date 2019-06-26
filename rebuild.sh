@@ -24,11 +24,13 @@ function rebuild() {
      *.log \
      *.log.[0-9]*
 
-  makepkg-mingw -sLf
+  makepkg-mingw --noconfirm -sLf
 
-  local _pkg_file=$(find . -type f -name *.pkg.tar.xz)
+  local _pkg_files=$(find . -type f -name "*.pkg.tar.xz")
 
-  pacman -U --asdeps --noconfirm $_pkg_file
+  for _pkg_file in ${_pkg_files[@]}; do
+    pacman -U --asdeps --noconfirm $_pkg_file
+  done
 }
 
 rebuild $@
