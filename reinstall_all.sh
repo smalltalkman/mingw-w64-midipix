@@ -9,7 +9,7 @@ function do_echo() {
   done
 }
 
-function rebuild_all() {
+function reinstall_all() {
   if [ $# -lt 1 ]
   then
     readarray -t dirs < $BASE_PATH/rebuild_order
@@ -18,9 +18,9 @@ function rebuild_all() {
   fi
 
   for dir in ${dirs[@]}; do
-    do_echo ">>> Rebuilding $dir <<<"
-    $BASE_PATH/rebuild.sh $dir
+    do_echo ">>> Reinstalling $dir <<<"
+    $BASE_PATH/reinstall.sh $dir
   done
 }
 
-rebuild_all $@
+reinstall_all $@
