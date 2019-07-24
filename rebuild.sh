@@ -21,6 +21,7 @@ function rebuild() {
      pkg/ \
      *.pkg.tar.xz \
      *.src.tar.gz \
+     logpipe.* \
      *.log \
      *.log.[0-9]*
 
