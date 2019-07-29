@@ -4,7 +4,7 @@ _realname=midipix-ntapi
 pkgbase=mingw-w64-${_realname}-git
 pkgname="${MINGW_PACKAGE_PREFIX}-${_realname}-git"
 _base_ver=0.0.0
-pkgver=0.0.0.595.96f6a0e
+pkgver=0.0.0.599.2903da0
 pkgrel=1
 pkgdesc="Native API core library (mingw-w64)"
 arch=('any')
@@ -22,9 +22,9 @@ source=(${_realname}::git://midipix.org/ntapi
         0002-project.patch
         0003-src.patch)
 sha256sums=('SKIP'
-            '9DB0AAF9191A1852B23500CE9639BC2096520842A4B11914CCFA50E5F5AE0692'
-            '792E7964B51E4E3A702EC399B8D595E3BC5950855EF0D1393EA6EAFF6ADFF303'
-            '2A8D3230B84F7A6896A01D4EDD873AAA7A5AE58309D1E6986F45749BAB115209')
+            '9db0aaf9191a1852b23500ce9639bc2096520842a4b11914ccfa50e5f5ae0692'
+            '792e7964b51e4e3a702ec399b8d595e3bc5950855ef0d1393ea6eaff6adff303'
+            'f86e32f6dc59bf74a85ba38c4f3a14a0bfc7b94ecb76bc520f7095ad444f083f')
 
 # Helper macros to help make tasks easier #
 apply_patch_with_msg() {
