@@ -1,15 +1,3 @@
-diff -urN '-x*.orig' midipix-ntapi.orig/src/daemon/ntapi_dsr_init.c midipix-ntapi/src/daemon/ntapi_dsr_init.c
---- midipix-ntapi.orig/src/daemon/ntapi_dsr_init.c	2019-05-03 10:07:59.020619300 +0800
-+++ midipix-ntapi/src/daemon/ntapi_dsr_init.c	2019-05-03 15:16:57.380269700 +0800
-@@ -217,7 +217,7 @@
- 		__ntapi_dsr_start_impl(params));
- }
- 
--int32_t __stdcall __ntapi_dsr_start(nt_daemon_params * params)
-+int32_t __ntapi_dsr_start(nt_daemon_params * params)
- {
- 	return __ntapi_tt_seh_frame(
- 		params,0,0,
 diff -urN '-x*.orig' midipix-ntapi.orig/src/string/ntapi_tt_dec_utf16_to_uintptr.c midipix-ntapi/src/string/ntapi_tt_dec_utf16_to_uintptr.c
 --- midipix-ntapi.orig/src/string/ntapi_tt_dec_utf16_to_uintptr.c	2019-05-03 10:07:59.616653400 +0800
 +++ midipix-ntapi/src/string/ntapi_tt_dec_utf16_to_uintptr.c	2019-05-03 15:34:40.651967000 +0800
