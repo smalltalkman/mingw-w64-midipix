@@ -1,6 +1,17 @@
 #!/bin/bash
 BASE_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+case $1 in
+  "-32")
+    bit="-32"
+    shift
+  ;;
+  "-64")
+    bit="-64"
+    shift
+  ;;
+esac
+
 function do_echo() {
   local _begin_color="\033[31m"
   local _end_color="\033[0m"
@@ -19,7 +30,7 @@ function rebuild_all() {
 
   for dir in ${dirs[@]}; do
     do_echo ">>> Rebuilding $dir <<<"
-    $BASE_PATH/rebuild.sh $dir
+    $BASE_PATH/rebuild.sh $bit $dir
   done
 }
 
