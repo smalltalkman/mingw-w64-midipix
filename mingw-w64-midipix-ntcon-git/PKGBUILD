@@ -20,8 +20,8 @@ source=(${_realname}::git://midipix.org/ntcon
         0001-sofort.patch
         0002-project.patch)
 sha256sums=('SKIP'
-            '9DB0AAF9191A1852B23500CE9639BC2096520842A4B11914CCFA50E5F5AE0692'
-            '41F9B755FDC0B908569BDACE7885DBF32E2C62813002F75410D61CCAF1420780')
+            '9db0aaf9191a1852b23500ce9639bc2096520842a4b11914ccfa50e5f5ae0692'
+            '41f9b755fdc0b908569bdace7885dbf32e2c62813002f75410d61ccaf1420780')
 
 # Helper macros to help make tasks easier #
 apply_patch_with_msg() {

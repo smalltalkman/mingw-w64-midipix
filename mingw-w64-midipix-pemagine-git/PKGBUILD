@@ -19,8 +19,8 @@ source=(${_realname}::git://midipix.org/pemagine
         0001-sofort.patch
         0002-project.patch)
 sha256sums=('SKIP'
-            '9DB0AAF9191A1852B23500CE9639BC2096520842A4B11914CCFA50E5F5AE0692'
-            '45464F4E95E35325865F9BB50BB2445F02C4EB5FFEE8CAED42171A41D6EDECFA')
+            '9db0aaf9191a1852b23500ce9639bc2096520842a4b11914ccfa50e5f5ae0692'
+            '45464f4e95e35325865f9bb50bb2445f02c4eb5ffee8caed42171a41d6edecfa')
 
 # Helper macros to help make tasks easier #
 apply_patch_with_msg() {
