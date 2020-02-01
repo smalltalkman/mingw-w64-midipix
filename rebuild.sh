@@ -35,7 +35,7 @@ function rebuild() {
   rm -rf \
      src/ \
      pkg/ \
-     mingw-w64-${machine}-*.pkg.tar.xz \
+     mingw-w64-${machine}-*.pkg.tar.{xz,zst} \
      *.src.tar.gz \
      logpipe.* \
      mingw-w64-*-${machine}-*.log \
@@ -45,7 +45,7 @@ function rebuild() {
 
   makepkg-mingw --noconfirm -sLf
 
-  local _pkg_files=$(find . -type f -name "mingw-w64-${machine}-*.pkg.tar.xz")
+  local _pkg_files=$(find . -type f -name "mingw-w64-${machine}-*.pkg.tar.zst")
 
   for _pkg_file in ${_pkg_files[@]}; do
     pacman -U --asdeps --noconfirm $_pkg_file
