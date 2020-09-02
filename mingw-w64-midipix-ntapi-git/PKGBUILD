@@ -4,7 +4,7 @@ _realname=midipix-ntapi
 pkgbase=mingw-w64-${_realname}-git
 pkgname="${MINGW_PACKAGE_PREFIX}-${_realname}-git"
 _base_ver=0.0.0
-pkgver=0.0.0.678.31887fa
+pkgver=0.0.0.705.9e45fa3
 pkgrel=1
 pkgdesc="Native API core library (mingw-w64)"
 arch=('any')
@@ -19,12 +19,10 @@ makedepends=("git"
              "${MINGW_PACKAGE_PREFIX}-gcc")
 source=(${_realname}::git://midipix.org/ntapi
         0001-sofort.patch
-        0002-project.patch
-        0003-src.patch)
+        0002-project.patch)
 sha256sums=('SKIP'
             '9db0aaf9191a1852b23500ce9639bc2096520842a4b11914ccfa50e5f5ae0692'
-            '792e7964b51e4e3a702ec399b8d595e3bc5950855ef0d1393ea6eaff6adff303'
-            'a0ad3a8efc5c7653a847e5b66a5fd8e38e1a33db3140dcdddc102cf3c0b2ac84')
+            '792e7964b51e4e3a702ec399b8d595e3bc5950855ef0d1393ea6eaff6adff303')
 
 # Helper macros to help make tasks easier #
 apply_patch_with_msg() {
@@ -41,8 +39,7 @@ prepare() {
   cd "${srcdir}/${_realname}"
   apply_patch_with_msg \
     0001-sofort.patch \
-    0002-project.patch \
-    0003-src.patch
+    0002-project.patch
 
   case "${CARCH}" in
     i686)

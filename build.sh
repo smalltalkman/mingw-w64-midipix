@@ -14,6 +14,7 @@ function clean() {
 }
 
 function build() {
+  pacman -S --asdeps --needed --noconfirm base
   updpkgsums
   pacman -S --asdeps --needed --noconfirm mingw-w64-${machine}-gcc
   case $machine in
