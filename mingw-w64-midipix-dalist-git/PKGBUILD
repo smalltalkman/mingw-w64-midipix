@@ -42,12 +42,13 @@ prepare() {
   case "${CARCH}" in
     i686)
       export HOST_BITS=32
+      export HOST_UNDERSCORE=_
     ;;
     x86_64)
       export HOST_BITS=64
+      export HOST_UNDERSCORE=
     ;;
   esac
-  export HOST_UNDERSCORE=_
 }
 
 pkgver() {
